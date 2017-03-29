@@ -1,0 +1,5 @@
+Upload documents and unorganized notes in this folder.
+
+- Thoughts for discussion and expansion should be migrated to an ISSUE (open or new).
+- Game docs like word docs of card ideas should be migrated to appropriate json data file.
+- Game docs like word docs of rules should be migrated/merged into the master document
