@@ -1,0 +1,85 @@
+{
+  "types": {
+    "null": {
+      "info": "A null type for the template. Data = {}",
+      "template": ""
+    },
+    "ResDiff": {
+      "info": "Increases the difficulty of receiving resources from a specific type of tile. Data is an object of:
+      'res'     :   one of ['metal', 'water', 'jungle', 'gas']
+      'amt'     :   number value of increase",
+      "template": "Increase the resource value on each $RES$ tile you are touching by $AMT$."
+    },
+    "Meteor": {
+      "info": "Causes various effects based on the tile struck. No data.",
+      "template": {
+        "water": "A massive flood splashes on all adjacent tiles, increasing their movement cost by one.",
+        "jungle": "The jungle ground cracks, destroying all adjacent buildings.",
+        "metal": "The mountain you are harvesting metal from is struck, sending up enormous plumes of dust and smoke. Increase the resource value on this and all adjacent tiles by one.",
+        "gas": "The meteorite unleashes a massive burst of nautral gas. Half of all infantry units on this and any adjacent tile asphyxiate and die."
+      }
+    }
+  },
+  "cards": [
+    {
+      "id": 0,
+      "title": "Template",
+      "text": "This is a template card to show how JSON data is organized. id, title, text, type, and quantity are obligatory. data is obligatorily either an object (dictionary) of data, or the empty object {} (not null). See 'types' for the possibilities for type, which define data. Text is the flavor. The type determines the 'effect text'.",
+      "type": "null",
+      "data": {},
+      "quantity": 0
+    },
+    {
+      "id": 1,
+      "title": "Cave Collapse!",
+      "text": "The caves you have been harvesting metal from are starting to collapse.",
+      "type": "ResDiff",
+      "data": {
+        "res": "metal",
+        "amt": 1
+      },
+      "quantity": 6
+    },
+    {
+      "id": 2,
+      "title": "Rusted Equipment!",
+      "text": "The equipment you use to harvest water has become rusted and inefficient. It is feeding water back into the resource causing large waves and tide issues.",
+      "type": "ResDiff",
+      "data": {
+        "res": "water",
+        "amt": 1
+      },
+      "quantity": 6
+    },
+    {
+      "id": 3,
+      "title": "Under Growth!",
+      "text": "The plants you have been harvesting in the jungles are not growing back as quickly as you need them.",
+      "type": "ResDiff",
+      "data": {
+        "res": "jungle",
+        "amt": 1
+      },
+      "quantity": 6
+    },
+    {
+      "id": 4,
+      "title": "Gas Stress!",
+      "text": "The gas you have been harvesting has caused pressure differentials in the ground. Cracking has started and gas has been seeping ever so slightly into the air.",
+      "type": "ResDiff",
+      "data": {
+        "res": "gas",
+        "amt": 1
+      },
+      "quantity": 6
+    },
+    {
+      "id": 5,
+      "title": "Meteor Strike!",
+      "text": "A destructive fireball of rock hurtles toward the planet's surface. Roll two dice (black and yellow), and the meteorite strikes that tile. (If your yellow roll is 5 or 6, the meteroite passes by your region with no noticeable damage to you.) The meteroite crashing down causes the following to occur:",
+      "type": "Meteor",
+      "data": {},
+      "quantity": 2
+    }
+  ]
+}
