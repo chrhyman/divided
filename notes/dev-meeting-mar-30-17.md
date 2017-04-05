@@ -7,8 +7,8 @@ __Summary__:
 - [x] Visualizing the game board
 - [x] Tile flipping (Resource depletion)
 - [ ] Movement cost
-- [ ] a
-- [ ] a
+- [ ] Multiple houses on one resource tile
+- [x] Buildings contributing to incidents
 - [ ] a
 - [ ] a
 
@@ -26,7 +26,25 @@ As in the v2.0 rules, a resource tile flips when its resource difficulty exceeds
 
 ## Movement cost
 
-We have an open discussion on movement cost. Currently there is no hard-coded maximum movement cost. The theoretical maximum is 18, as that is a perfect roll of three 6s. Should we allow inaccessible tiles? Keep in mind that there is currently no mechanic to lower movement cost in the game.
+We have an open discussion on movement cost. Currently there is no hard-coded maximum movement cost. The theoretical maximum is 18, as that is a perfect roll of three 6s. Should we allow inaccessible tiles? (Think about movement thematically as well.) Keep in mind that there is currently no mechanic to lower movement cost in the game.
+
+## Multiple houses on one resource
+
+We have an open discussion on multiple houses on one resource. From one perspective, games like Catan might make players feel like they _should_ get two resources if they have two houses on a tile. On the other hand, incident rolls represent a player's effect on the planet, and if they get two resources, the tile should count twice, etc.
+
+## Buildings contributing to incidents
+
+Chris raised a question about Barracks contributing to the incident roll. It was clarified that only the building that collects resources, i.e. Houses, will count towards calculating the incident roll. When incident cards target tiles you touch, only count buildings that gather resources (i.e., Houses).
+
+## Other considerations
+
+For brevity, smaller topics are grouped under this heading. These may need further discussion or playtesting in order to resolve.
+
+* Resource gathering in the late game may become tedious, or be more work than its worth. This may depend on the token used to represent the resources, however.
+* How is the pacing in resource acquisition?
+* How much RNG should there be in tile and cost distribution? There was a thought to include a "beginner" mode that was more balanced than pure randomness.
+* Still need to analyze and balance the cost of various structures and units.
+* Design issue: it's unfun to update movement and resource counters on each tile. May come down to components.
 
 # Reference: Raw notes
 
@@ -49,7 +67,7 @@ These are my raw notes from during the play session.
 - how much RNG should there be in tile distribution and cost distribution?
 - number of resources necessary to build various things
 
-#Reference: Dev notes
+# Reference: Dev notes
 
 These are my raw notes from during the dev meeting
 
