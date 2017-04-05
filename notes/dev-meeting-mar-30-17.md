@@ -1,16 +1,24 @@
 # Meeting information
 
 __Date__: March 30, 2017
+
 __Attendees__: Chris, Corey, Ryan
+
 __Secretary__: Chris
+
 __Summary__:
+
 - [x] Visualizing the game board
 - [x] Tile flipping (Resource depletion)
 - [ ] Movement cost
 - [ ] Multiple houses on one resource tile
 - [x] Buildings contributing to incidents
-- [ ] a
-- [ ] a
+- Other considerations
+  - [ ] Late game resource gathering
+  - [ ] Resource pacing
+  - [ ] RNG
+  - [ ] Cost and balancing
+  - [ ] Keeping up with counters
 
 # Topics
 
